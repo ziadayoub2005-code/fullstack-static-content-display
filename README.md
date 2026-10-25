@@ -2,6 +2,9 @@
 
 A high-performance, aesthetically refined full-stack web application designed to serve and display static text and imagery using modern web standards. Built in full accordance with the project requirements: zero database dependency, no external APIs, and lightning-fast static delivery.
 
+🔗 **Live Demo**: [https://ziadayoub2005-code.github.io/fullstack-static-content-display/](https://ziadayoub2005-code.github.io/fullstack-static-content-display/)  
+📦 **GitHub Repository**: [https://github.com/ziadayoub2005-code/fullstack-static-content-display](https://github.com/ziadayoub2005-code/fullstack-static-content-display)
+
 ---
 
 ## 🌟 Key Highlights & Features
