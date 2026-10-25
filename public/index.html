@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aura Studio | Full Stack Static Content Exhibition</title>
+  <meta name="description" content="A modern full-stack web application demonstrating static text and image rendering served via Node.js and Express.">
+  <meta name="theme-color" content="#0d0f14">
+
+  <!-- Google Fonts: Inter & Outfit -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Core CSS -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <header class="site-header">
+    <div class="container header-container">
+      <a href="#" class="brand-logo">
+        <span class="logo-icon">✦</span>
+        <span class="logo-text">AURA<span class="logo-accent">.STUDIO</span></span>
+      </a>
+
+      <nav class="nav-links" id="navLinks">
+        <a href="#showcase" class="nav-link active">Showcase</a>
+        <a href="#philosophy" class="nav-link">Philosophy</a>
+        <a href="#specs" class="nav-link">Architecture</a>
+      </nav>
+
+      <div class="header-actions">
+        <button id="themeToggle" class="theme-toggle" aria-label="Toggle dark/light theme" title="Toggle theme">
+          <span class="theme-icon light-icon">☀️</span>
+          <span class="theme-icon dark-icon">🌙</span>
+        </button>
+        <a href="#showcase" class="btn btn-sm btn-primary">Explore Works</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="container hero-content">
+      <div class="badge-pill">
+        <span class="badge-dot"></span>
+        <span>Full-Stack Static Exhibition</span>
+      </div>
+
+      <h1 class="hero-title">
+        Crafting Modern Spaces &amp; <span class="gradient-text">Visual Artistry</span>
+      </h1>
+
+      <p class="hero-description">
+        A seamless demonstration of full-stack engineering delivering high-fidelity static text,
+        curated architectural compositions, and digital artistry without database dependencies.
+      </p>
+
+      <div class="hero-cta-group">
+        <a href="#showcase" class="btn btn-lg btn-primary">
+          <span>View Gallery</span>
+          <span class="btn-arrow">→</span>
+        </a>
+        <a href="#specs" class="btn btn-lg btn-outline">
+          <span>Tech Stack Specs</span>
+        </a>
+      </div>
+
+      <!-- Quick Metrics Strip -->
+      <div class="metrics-grid">
+        <div class="metric-card">
+          <span class="metric-value">3</span>
+          <span class="metric-label">Curated Portfolios</span>
+        </div>
+        <div class="metric-card">
+          <span class="metric-value">100%</span>
+          <span class="metric-label">Static &amp; Instant</span>
+        </div>
+        <div class="metric-card">
+          <span class="metric-value">0 ms</span>
+          <span class="metric-label">Database Overhead</span>
+        </div>
+        <div class="metric-card">
+          <span class="metric-value">Node.js</span>
+          <span class="metric-label">Static Backend</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Showcase Section -->
+  <main class="container">
+    <section id="showcase" class="showcase-section">
+      <div class="section-header">
+        <div class="section-badge">Gallery Collection</div>
+        <h2 class="section-title">Selected Static Compositions</h2>
+        <p class="section-subtitle">
+          High-resolution imagery paired with rich contextual narrative, served directly by the backend file server.
+        </p>
+
+        <!-- Category Filter Tabs -->
+        <div class="filter-bar" role="tablist">
+          <button class="filter-btn active" data-filter="all" role="tab" aria-selected="true">All Works</button>
+          <button class="filter-btn" data-filter="architecture" role="tab" aria-selected="false">Architecture</button>
+          <button class="filter-btn" data-filter="digital-art" role="tab" aria-selected="false">Digital Art</button>
+          <button class="filter-btn" data-filter="workspace" role="tab" aria-selected="false">Workspaces</button>
+        </div>
+      </div>
+
+      <!-- Gallery Grid -->
+      <div class="gallery-grid" id="galleryGrid">
+
+        <!-- Card 1: Architecture -->
+        <article class="showcase-card" data-category="architecture">
+          <div class="card-media-wrapper" data-action="open-modal" data-title="The Glass Pavilion & Reflection Basin" data-image="images/architecture.jpg">
+            <img 
+              src="images/architecture.jpg" 
+              alt="Modern architectural pavilion with curved glass walls reflecting sunset light across a serene water basin" 
+              class="card-img" 
+              loading="lazy"
+            >
+            <div class="card-media-overlay">
+              <span class="zoom-icon">🔍 Click to Expand</span>
+            </div>
+            <span class="category-tag">Architecture</span>
+          </div>
+          <div class="card-body">
+            <div class="card-meta">
+              <span class="meta-date">Edition 01</span>
+              <span class="meta-bullet">•</span>
+              <span class="meta-status">Curated Exhibit</span>
+            </div>
+            <h3 class="card-title">The Glass Pavilion &amp; Reflection Basin</h3>
+            <p class="card-description">
+              An architectural study in curvilinear concrete harmony. Expansive panoramic curved glazing invites warm sunset amber tones into an open living sanctuary embraced by native flora and tranquil reflective pools.
+            </p>
+            <div class="tags-group">
+              <span class="spec-tag">Curved Glass</span>
+              <span class="spec-tag">Solar Passive</span>
+              <span class="spec-tag">Cast Concrete</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 2: Digital Art -->
+        <article class="showcase-card" data-category="digital-art">
+          <div class="card-media-wrapper" data-action="open-modal" data-title="Chromatic Iridescence & Fluid Sculpture" data-image="images/abstract-sculpture.jpg">
+            <img 
+              src="images/abstract-sculpture.jpg" 
+              alt="3D abstract fluid iridescent sculpture floating in dark studio space with cyan and violet reflections" 
+              class="card-img" 
+              loading="lazy"
+            >
+            <div class="card-media-overlay">
+              <span class="zoom-icon">🔍 Click to Expand</span>
+            </div>
+            <span class="category-tag">Digital Art</span>
+          </div>
+          <div class="card-body">
+            <div class="card-meta">
+              <span class="meta-date">Edition 02</span>
+              <span class="meta-bullet">•</span>
+              <span class="meta-status">3D Exploration</span>
+            </div>
+            <h3 class="card-title">Chromatic Iridescence &amp; Fluid Sculpture</h3>
+            <p class="card-description">
+              A dynamic digital simulation of fluid ribbons frozen mid-flow. Iridescent glass coatings refract cyan and violet light, contrasting sharply against a deep matte backdrop to celebrate weightless geometry.
+            </p>
+            <div class="tags-group">
+              <span class="spec-tag">Fluid Motion</span>
+              <span class="spec-tag">Raytracing</span>
+              <span class="spec-tag">Iridescent Shader</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 3: Workspace -->
+        <article class="showcase-card" data-category="workspace">
+          <div class="card-media-wrapper" data-action="open-modal" data-title="The Nordic Atelier & Craft Workspace" data-image="images/studio-interior.jpg">
+            <img 
+              src="images/studio-interior.jpg" 
+              alt="Warm minimalist Scandinavian architectural design studio with sunlit oak desk and draft sketches" 
+              class="card-img" 
+              loading="lazy"
+            >
+            <div class="card-media-overlay">
+              <span class="zoom-icon">🔍 Click to Expand</span>
+            </div>
+            <span class="category-tag">Workspace</span>
+          </div>
+          <div class="card-body">
+            <div class="card-meta">
+              <span class="meta-date">Edition 03</span>
+              <span class="meta-bullet">•</span>
+              <span class="meta-status">Interior Concept</span>
+            </div>
+            <h3 class="card-title">The Nordic Atelier &amp; Craft Workspace</h3>
+            <p class="card-description">
+              A serene creative environment celebrating tactile materials and natural illumination. Solid oak timber, textured clay plaster, and directional morning light foster contemplative architectural design.
+            </p>
+            <div class="tags-group">
+              <span class="spec-tag">Solid Oak</span>
+              <span class="spec-tag">Natural Lighting</span>
+              <span class="spec-tag">Tactile Focus</span>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- Philosophy Section -->
+    <section id="philosophy" class="philosophy-section">
+      <div class="section-header">
+        <div class="section-badge">Foundations</div>
+        <h2 class="section-title">Design &amp; Architecture Principles</h2>
+        <p class="section-subtitle">
+          How static delivery elevates reliability, performance, and user delight.
+        </p>
+      </div>
+
+      <div class="philosophy-grid">
+        <div class="philosophy-card">
+          <div class="philosophy-icon">⚡</div>
+          <h3 class="philosophy-title">Zero Overhead Delivery</h3>
+          <p class="philosophy-text">
+            By eliminating unnecessary database queries and complex backend runtime states, static content is delivered instantly with maximum reliability and near-instant load speeds.
+          </p>
+        </div>
+
+        <div class="philosophy-card">
+          <div class="philosophy-icon">💎</div>
+          <h3 class="philosophy-title">High-Fidelity Aesthetics</h3>
+          <p class="philosophy-text">
+            Clean typography, balanced contrast, thoughtful spacing, and subtle glassmorphic surfaces ensure that content takes center stage with professional elegance.
+          </p>
+        </div>
+
+        <div class="philosophy-card">
+          <div class="philosophy-icon">📱</div>
+          <h3 class="philosophy-title">Fluid Responsiveness</h3>
+          <p class="philosophy-text">
+            Crafted with modern CSS Grid and Flexbox mechanics to guarantee seamless readability across smartphones, tablets, laptops, and ultra-wide displays.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tech Stack Specs Section -->
+    <section id="specs" class="specs-section">
+      <div class="section-header">
+        <div class="section-badge">Architecture Blueprint</div>
+        <h2 class="section-title">Full Stack Project Breakdown</h2>
+        <p class="section-subtitle">
+          Detailed technical specifications of this static application implementation.
+        </p>
+      </div>
+
+      <div class="specs-table-card">
+        <div class="specs-table-header">
+          <span>Component Layer</span>
+          <span>Technology</span>
+          <span>Role &amp; Implementation Details</span>
+        </div>
+
+        <div class="specs-row">
+          <div class="spec-col layer"><span class="layer-pill frontend">Frontend</span></div>
+          <div class="spec-col tech"><strong>Semantic HTML5</strong></div>
+          <div class="spec-col desc">Structured accessible content layout, semantic landmark tags, and SEO-ready meta definitions.</div>
+        </div>
+
+        <div class="specs-row">
+          <div class="spec-col layer"><span class="layer-pill frontend">Frontend</span></div>
+          <div class="spec-col tech"><strong>Vanilla CSS3</strong></div>
+          <div class="spec-col desc">Custom properties (CSS tokens), glassmorphism effects, responsive grid, and fluid dark/light themes.</div>
+        </div>
+
+        <div class="specs-row">
+          <div class="spec-col layer"><span class="layer-pill frontend">Frontend</span></div>
+          <div class="spec-col tech"><strong>Vanilla JavaScript</strong></div>
+          <div class="spec-col desc">Client-side category filtering, image modal lightbox preview, and theme persistence.</div>
+        </div>
+
+        <div class="specs-row">
+          <div class="spec-col layer"><span class="layer-pill backend">Backend</span></div>
+          <div class="spec-col tech"><strong>Node.js &amp; Express</strong></div>
+          <div class="spec-col desc">Serves HTML, CSS, JS, and image assets securely via <code>express.static</code> with cache headers and status check.</div>
+        </div>
+
+        <div class="specs-row">
+          <div class="spec-col layer"><span class="layer-pill backend">Backend</span></div>
+          <div class="spec-col tech"><strong>Zero DB Architecture</strong></div>
+          <div class="spec-col desc">Meets project requirements: no database calls, no external APIs, purely static content delivery.</div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Image Lightbox Modal -->
+  <div id="imageModal" class="modal" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="modal-backdrop" id="modalBackdrop"></div>
+    <div class="modal-content">
+      <button class="modal-close" id="modalClose" aria-label="Close image preview">&times;</button>
+      <div class="modal-img-container">
+        <img id="modalImg" src="" alt="Full view preview" class="modal-img">
+      </div>
+      <div class="modal-caption" id="modalCaption"></div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <div class="footer-brand">
+        <span class="logo-icon">✦</span>
+        <span class="logo-text">AURA.STUDIO</span>
+        <p class="footer-tagline">Full Stack Static Content Display Project</p>
+      </div>
+
+      <div class="footer-meta">
+        <span class="status-indicator">
+          <span class="status-dot"></span>
+          Backend Server: Active
+        </span>
+        <span class="footer-separator">•</span>
+        <span>Built with Node.js, Express &amp; Vanilla Web Standards</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Core JavaScript -->
+  <script src="js/main.js"></script>
+</body>
+</html>

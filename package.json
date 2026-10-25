@@ -1,0 +1,23 @@
+{
+  "name": "full-stack-static-content-display",
+  "version": "1.0.0",
+  "description": "Full-stack web application serving and displaying static text and images with modern aesthetics.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js"
+  },
+  "keywords": [
+    "fullstack",
+    "static-display",
+    "express",
+    "html5",
+    "css3",
+    "javascript"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.21.2"
+  }
+}
